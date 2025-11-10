@@ -1,0 +1,7 @@
+pandas==2.2.2
+numpy==1.26.4
+pyarrow==17.0.0
+pytest==8.2.0
+flake8==7.1.1
+sqlite-utils==3.36
+python-dateutil==2.9.0.post0
