@@ -1,21 +1,45 @@
-# python
+# Python
 __pycache__/
-*.pyc
-.mypy_cache/
-.pytest_cache/
-
-# data & reports
-data/raw/*
-!data/raw/.gitkeep
-data/processed/*
-!data/processed/.gitkeep
-reports/*
-!reports/.gitkeep
-
-# envs
+*.py[cod]
+*.pyo
+*.pyd
 .env
-.venv/
 venv/
+.env/
+.venv/
+env/
 
-# OS
+# Notebooks
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Data files
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Reports
+reports/*.html
+reports/*.pdf
+reports/output/*
+!reports/output/.gitkeep
+
+# Logs
+*.log
+
+# OS files
 .DS_Store
+Thumbs.db
+
+# IDE files
+.idea/
+.vscode/
+
+# Test outputs
+.coverage
+pytest_cache/
+
+# Environment files
+*.sqlite
+*.db
