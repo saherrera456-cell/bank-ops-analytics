@@ -131,6 +131,7 @@ Ver `dashboards/README.md` para instrucciones.
 - `flake8`: estilo y calidad.  
 - GitHub Actions (`ci.yml`): ejecuta lint+tests en cada push/PR.
 
+
 ---
 
 ## Data & Ethics
@@ -151,3 +152,16 @@ MIT — ver `LICENSE`.
 - **LinkedIn**: https://www.linkedin.com/in/santiago-herrera-rojas-0b6985131
 
 > This repository is part of a professional portfolio oriented to banking/fintech analytics and operational excellence.
+
+----------------------- Update 1.2 -----------------------
+### Quality checks & KPIs (local)
+```bash
+# generar datos
+python tools/generate_synthetic.py
+
+# KPIs → ./reports/*.csv
+python -m src.bankops.kpis
+
+# controles de calidad → ./reports/quality_report.json (+ CSVs de fallas si los hay)
+python -m src.bankops.quality_checks
+
