@@ -5,7 +5,7 @@
 
 ---
 
-## ✅ Type of Change
+## Type of Change
 
 - [ ] Bug fix
 - [ ] New feature
@@ -15,13 +15,13 @@
 
 ---
 
-## 📦 Changes
+##  Changes
 
 - (List major changes clearly)
 
 ---
 
-## 🧪 Testing
+##  Testing
 
 Describe how you tested your changes:
 
@@ -31,7 +31,7 @@ Describe how you tested your changes:
 
 ---
 
-## 📄 Documentation
+##  Documentation
 
 - [ ] Updated README
 - [ ] Updated examples
@@ -39,7 +39,7 @@ Describe how you tested your changes:
 
 ---
 
-## ✔️ Checklist
+## Checklist
 
 - [ ] My code follows project guidelines
 - [ ] I have added tests or explained why they’re not needed
