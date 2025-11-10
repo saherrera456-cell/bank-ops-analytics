@@ -49,7 +49,7 @@ bank-ops-analytics/
 
 ---
 
-## 🛠️ Stack
+## Stack
 - **Python**: pandas, numpy, pytest, flake8  
 - **SQL**: SQLite (portable & easy to reproduce)  
 - **Dashboards**: Power BI / Streamlit (optional)  
@@ -100,7 +100,7 @@ SQL examples (`sql/analytics_queries.sql`):
 
 ---
 
-## 🔍 Process Overview
+## Process Overview
 1) **Ingest**: `transactions_sample.csv` (sintético) → ETL en `src/bankops/etl.py`.  
 2) **Clean**: tipificación, normalización, nulos, dominios.  
 3) **Store**: parquet limpio en `data/processed/`.  
