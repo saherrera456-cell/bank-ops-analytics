@@ -1,0 +1,45 @@
+name: CI - BankOps
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test-and-report:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Create synthetic data
+        run: |
+          python tools/generate_synthetic.py
+          ls -R
+
+      - name: Run tests
+        run: pytest -q
+
+      - name: Generate KPI reports
+        run: |
+          python -m src.bankops.kpis --input data/processed/transactions_clean.parquet --prefix ci_bankops
+
+      - name: Run data quality checks
+        run: |
+          python -m src.bankops.quality_checks
+
+      - name: Upload reports artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: reports
+          path: |
+            reports/**
