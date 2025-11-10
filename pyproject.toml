@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bankops"
+version = "0.1.0"
+description = "BankOps: analytics, KPIs y data quality para portafolio"
+authors = [{ name = "Santiago Herrera Rojas", email = "saherrera456@gmail.com" }]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "pandas>=2.1",
+  "pyarrow>=14.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=7.4",
+  "pytest-cov>=4.1",
+  "mypy>=1.10",
+  "black>=24.3.0",
+  "ruff>=0.5.0",
+  "types-pytz",
+  "types-python-dateutil",
+]
+
+[tool.black]
+line-length = 100
+target-version = ["py310"]
+
+[tool.ruff]
+line-length = 100
+select = ["E","F","I","UP"]  # basic pyflakes/pycodestyle/imports, pyupgrade
+ignore = []
+
+[tool.mypy]
+python_version = "3.10"
+warn_unused_configs = true
+disallow_untyped_defs = true
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+addopts = "-q --cov=src --cov-report=term-missing --cov-report=xml:reports/coverage.xml"
+testpaths = ["tests"]
