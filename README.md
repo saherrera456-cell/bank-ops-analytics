@@ -9,6 +9,13 @@
 - **Technical depth**: Python (pandas), SQL (SQLite), tests (pytest), CI (GitHub Actions), clean repo structure.
 - **Storytelling**: clear README, glossary, and recommendations for decision-makers.
 
+![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)
+![R](https://img.shields.io/badge/R-supported-success)
+![CI](https://github.com/USERNAME/REPO/actions/workflows/ci.yml/badge.svg)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![Status](https://img.shields.io/badge/status-active-brightgreen)
+
+
 ---
 
 ## Objectives
